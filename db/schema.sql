@@ -6,4 +6,4 @@ create table burgers (
     burger_name varchar(50) not null,
     devoured boolean not null, 
     primary key(id)
-)
+);
