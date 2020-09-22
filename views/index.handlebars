@@ -10,7 +10,7 @@
         <div class="col-lg-6">
             <ul>
             {{#each burgers}}
-                <p>{{burger_name}}</p>
+                <p>{{> burgers/devour devoured=false}}</p>
             {{/each}}
             </ul>        
         </div>
