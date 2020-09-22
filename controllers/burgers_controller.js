@@ -6,11 +6,11 @@ const router = express.Router();
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function (req, res) {
     burger.selectAll(function (data) {
-        var hbsObject = {
+        const burgerObj = {
             burgers: data
         };
-        console.log(hbsObject);
-        res.render("index", hbsObject);
+        console.log(burgerObj);
+        res.render("index", burgerObj);
     });
 });
 
@@ -42,7 +42,5 @@ router.put("/api/cats/:id", function (req, res) {
 });
 
 module.exports = router
-
-
 
 // 4. Create the `router` for the app, and export the `router` at the end of your file.
