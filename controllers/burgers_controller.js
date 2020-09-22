@@ -9,7 +9,7 @@ router.get("/", function (req, res) {
         const burgerObj = {
             burgers: data
         };
-        console.log(burgerObj);
+        console.log("burgerobj wuz here");
         res.render("index", burgerObj);
     });
 });
@@ -25,9 +25,10 @@ router.post("/api/burgers", function (req, res) {
             id: result.insertId
         });
     });
+    console.log("i clicked post")
 });
 
-router.put("/api/cats/:id", function (req, res) {
+router.put("/api/burgers/:id", function (req, res) {
     let condition = "id = " + req.params.id;
     burger.update({
         devoured: req.body.devoured

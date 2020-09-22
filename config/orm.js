@@ -17,6 +17,7 @@ const orm = {
         connection.query(queryStr, [table, col1, col2, val1, val2], (err,result) => {
             if (err) throw err;
             cb(result)
+            console.log(queryStr.sql)
         })
     },
 

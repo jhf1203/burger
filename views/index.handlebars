@@ -8,18 +8,23 @@
     </div>
     <div class="row">
         <div class="col-lg-6">
-            Placeholder for uneaten burgers
+            <ul>
+            {{#each burgers}}
+                <p>{{burger_name}}</p>
+            {{/each}}
+            </ul>        
         </div>
         <div class="col-lg-6">
-            Placeholder for eaten burgers
+            <p class="float-left">Placeholder for eaten burgers</p>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-3">
         </div>
-        <div class="col-lg-6">
-            Placeholder for form
-        </div>
+        <form class="col-lg-6 new-burger-form">
+            <input id="name-input" placeholder="Enter your burger name here!" rows="4"></input>
+            <button id="name-input-submit" type="submit">Submit!</button>
+        </form>
         <div class="col-lg-3">
         </div>
     </div>
