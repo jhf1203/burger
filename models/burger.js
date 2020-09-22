@@ -14,7 +14,7 @@ const burger = {
         });
     },
     updateOne(col1, valNew, col2, cId, cb) {
-        orm.updateOne("burgers", col1, valNew, col2, cId, function (res) {
+        orm.updateOne("burgers", "devoured", valNew, "id", cId, function (res) {
             cb(res);
         });
     },

@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 7000;
 const app = express();
 
 // Middleware for static files
-app.use(express.static("./public/assets"));
+app.use(express.static("public"));
 
 // Enabling JSON
 app.use(express.urlencoded({ extended: true }));
