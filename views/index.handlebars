@@ -10,13 +10,20 @@
         <div class="col-lg-6">
             <ul>
             {{#each burgers}}
-                <p>{{> burgers/devour devoured=false}}</p>
+            {{#unless devoured}}
+                <p>{{> burgers/devour devoured=1}}</p>
+                {{/unless}}
             {{/each}}
             </ul>        
         </div>
         <div class="col-lg-6">
-            <p class="float-left">Placeholder for eaten burgers</p>
-        </div>
+<ul>
+            {{#each burgers}}
+            {{#if devoured}}
+                <p>{{> burgers/devour devoured=0}}</p>
+                {{/if}}
+            {{/each}}
+            </ul>         </div>
     </div>
     <div class="row">
         <div class="col-lg-3">
