@@ -4,7 +4,7 @@ const mysql = require("mysql")
 
 const orm = {
     selectAll: (table, cb) => {
-        let queryStr = `SELECT * FROM ${table}` ;
+        let queryStr = `SELECT * FROM ${table}`;
         connection.query(queryStr, (err, result) => {
             if (err) throw err;
             cb(result)
@@ -13,7 +13,7 @@ const orm = {
 
     insertOne: (table, col1, col2, val1, val2, cb) => {
         let queryStr = `INSERT INTO ??(??, ??) VALUES (?, ?)`;
-        connection.query(queryStr, [table, col1, col2, val1, val2], (err,result) => {
+        connection.query(queryStr, [table, col1, col2, val1, val2], (err, result) => {
             if (err) throw err;
             cb(result)
             console.log(queryStr.sql)
