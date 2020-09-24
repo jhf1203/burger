@@ -1,7 +1,6 @@
 const connection = require("./connection.js")
 const mysql = require("mysql")
 
-// This page throws an error, not recognizing conneciton.query.  Most likely because the callback function isn't defined
 
 const orm = {
     selectAll: (table, cb) => {

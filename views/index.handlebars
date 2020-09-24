@@ -1,38 +1,52 @@
 <header>
-    <h1>Eat Da Burger!</h1>
+    <h1 class="title-text">Eat Da Burger! <span class="tagline-text"><span class="tagline-step">Step 1:</span> Make a
+            burger. <span class="tagline-step">Step 2:</span> Devour said burger. Easy as that, and delicious!</span>
+    </h1>
 </header>
 
 <main class="container">
     <div class="row">
-        <div class="col-lg-12">Here's where we will have some photos.  Or maybe many!!</div>
+        <div class="col-lg-12">
+        </div>
     </div>
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 float-left not-devoured">
             <ul>
-            {{#each burgers}}
-            {{#unless devoured}}
+                {{#each burgers}}
+                {{#unless devoured}}
                 <p>{{> burgers/devour devoured=1}}</p>
                 {{/unless}}
-            {{/each}}
-            </ul>        
+                {{/each}}
+            </ul>
         </div>
-        <div class="col-lg-6">
-<ul>
-            {{#each burgers}}
-            {{#if devoured}}
+        <div class="col-lg-6 float-left yes-devoured">
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
                 <p>{{> burgers/devour devoured=0}}</p>
                 {{/if}}
-            {{/each}}
-            </ul>         </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-3">
+                {{/each}}
+            </ul>
         </div>
-        <form class="col-lg-6 new-burger-form">
+    </div>
+    <div class="row input-header">
+        <div class="col-lg-1">
+        </div>
+        <div class="col-lg-10">
+            <h2>Enter below what you would like to name your burger. Then you can <span>Devour It</span> at your
+                discretion. If you enjoy it enough, feel free to <span>Make Another!</span></h2>
+        </div>
+        <div class="col-lg-1">
+        </div>
+    </div>
+    <div class="row form-row">
+        <div class="col-lg-2">
+        </div>
+        <form class="col-lg-8 new-burger-form">
             <input id="name-input" placeholder="Enter your burger name here!" rows="4"></input>
-            <button id="name-input-submit" type="submit">Submit!</button>
+            <button id="name-input-submit" class="btn" type="submit">Submit!</button>
         </form>
-        <div class="col-lg-3">
+        <div class="col-lg-2">
         </div>
     </div>
 </main>
